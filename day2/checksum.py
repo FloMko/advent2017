@@ -46,8 +46,6 @@ def work(inline):
 
 def main():
     """general cinstruct"""
-    checks = 0
-    diff = 0
     midtext = middata(indata())
     return sum(map(work, midtext))
 
