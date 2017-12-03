@@ -32,11 +32,14 @@ def filter(ns, predicate):
 def predicate1(i, ns):
     return ns[i] == ns[(i+1) % len(ns)]
 
+def predicate2(i, ns):
+    return ns[i] == ns[(i+int(len(ns)/2)) % len(ns)]
+
 
 def main():
     indata = input()
     ns = striped(indata)
-    return filter(ns, predicate1)
+    return filter(ns, predicate2)
      
 def stat_main(ns):
     return filter(ns, predicate1)
