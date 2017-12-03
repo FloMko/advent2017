@@ -11,10 +11,9 @@ def middata(intext):
     midtext = []
     pureline = []
     for line in intext:
-        for element in line:
-            pureline.append(element.strip())
-            return pureline
-        midtext.append(pureline)
+        lastelement = line.pop(-1).strip()
+        line.append(lastelement)
+        midtext.append(line)
     return midtext
 
 
