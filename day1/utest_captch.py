@@ -22,12 +22,12 @@ class CapTest(unittest.TestCase):
     def test_case2(self):
         """correctly work with input"""
         print ( "id: " + self .id())
-        self.assertEqual(captcha.work('1122'), 3)
+        self.assertEqual(captcha.stat_main(captcha.striped(1122)), 3)
 
     def test_filtered(self):
         """retirn sum as intered"""
         print ( "id: " + self .id())
-        self.assertIsInstance(captcha.filter(), int)
+        self.assertIsInstance(captcha.main(), int)
 
 if __name__ == '__main__' :
     unittest.main()

@@ -38,6 +38,8 @@ def main():
     ns = striped(indata)
     return filter(ns, predicate1)
      
+def stat_main(ns):
+    return filter(ns, predicate1)
 
     
 if __name__ == '__main__':
