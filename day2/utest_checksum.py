@@ -5,7 +5,7 @@ class CapTest(unittest.TestCase):
     def test_indata_store(self):
         """store input"""
         print ( "id: " + self .id())
-        self.assertIsInstance(checksum.indata(), str)
+        self.assertIsInstance(checksum.indata(), list)
     def test_middata_return(self):
         """create list for work with data"""
         print ( "id: " + self .id())
