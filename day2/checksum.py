@@ -1,3 +1,5 @@
+from functools import reduce
+from fractions import gcd
 
 maxf = 0
 minf = 9999
@@ -8,17 +10,15 @@ def indata():
     intext =[] 
     with open('input.txt', 'r') as data:
         for line in data:
-            intext.append(line.split('\t'))
+            intext.append(line.split())
     return(intext)
 
 def middata(intext):
-    """chunk an prepare to work"""
+    """conver str to int"""
     midtext = []
-    pureline = []
     for line in intext:
-        lastelement = line.pop(-1).strip()
-        line.append(lastelement)
-        midtext.append(line)
+        row = [int(s) for s in line]
+        midtext.append(row)
     return midtext
 
 
@@ -44,12 +44,23 @@ def work(inline):
     diff = maxf - minf
     return diff
 
-def main():
-    """general cinstruct"""
-    midtext = middata(indata())
-    return sum(map(work, midtext))
+def pairwork(inline):
+    for i in inline:
+        for j in inline:
+            if i == j:
+                continue
+            if j == 0:
+                continue
+            if i % j == 0:
+                return i // j
+    return 0
 
+def main():
+    """general construct"""
+    midtext = middata(indata())
+    print(sum(map(pairwork, midtext)))
+    return sum(map(pairwork, midtext))
 
 if __name__ == '__main__':
-    main1()
+    main()
 
