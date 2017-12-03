@@ -1,3 +1,8 @@
+
+maxf = 0
+minf = 9999
+checks = 0
+
 def indata():
     """Just read and store"""
     intext =[] 
@@ -33,8 +38,22 @@ def minof(inline):
             minf = int(value)
     return minf
 
+def work(inline):
+    maxf = maxof(inline)
+    minf = minof(inline)
+    diff = maxf - minf
+    return diff
+
 def main():
     """general cinstruct"""
+    checks = 0
     midtext = middata(indata())
-    return midtext
+    for line in midtext:
+        diff = work(line)
+        checks +=diff
+    print(checks)
+    return checks
+
+if __name__ == '__main__':
+    main()
 

@@ -13,7 +13,7 @@ class CapTest(unittest.TestCase):
     def test_filtered_return(self):
         """output should be int"""
         print ( "id: " + self.id())
-        self.assertIsInstance(checksum.output(), int)
+        self.assertIsInstance(checksum.main(), int)
     def test_find_max(self):
         """find max value from list"""
         print ( "id: " + self.id())
