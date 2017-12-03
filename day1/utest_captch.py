@@ -12,6 +12,12 @@ class CapTest(unittest.TestCase):
         print ( "id: " + self .id())
         self.assertEqual(captcha.work('11'), 1)
 
+    def test_case2(self):
+        """correctly work with input"""
+        print ( "id: " + self .id())
+        self.assertEqual(captcha.work('1122'), 3)
+
+
 
 if __name__ == '__main__' :
     unittest.main()
