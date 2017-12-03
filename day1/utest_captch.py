@@ -13,18 +13,21 @@ class CapTest(unittest.TestCase):
     def test_striped_return(self):
         """strip return should be list"""
         print ( "id: " + self .id())
-        self.assertIsInstance(captcha.striped(), list)    
+        self.assertIsInstance(captcha.striped(123), list)    
     def test_case(self):
         """correctly work with input"""
         print ( "id: " + self .id())
-        self.assertEqual(captcha.work('11'), 1)
+        self.assertEqual(captcha.work('111'), 1)
 
     def test_case2(self):
         """correctly work with input"""
         print ( "id: " + self .id())
         self.assertEqual(captcha.work('1122'), 3)
 
-
+    def test_filtered(self):
+        """retirn sum as intered"""
+        print ( "id: " + self .id())
+        self.assertIsInstance(captcha.filter(), int)
 
 if __name__ == '__main__' :
     unittest.main()

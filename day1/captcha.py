@@ -16,7 +16,29 @@ def work(chain):
         sum += int(chain[0])
     return sum
 
-def striped():
-    chain = input()
-    ns = [int(i) for i in str(chain)]
+def striped(indata):
+    ns = [int(i) for i in str(indata)]
     return ns
+
+def filter(ns, predicate):
+    filtered = []
+    i = 0
+    for i in range(len(ns)):
+        if predicate(i, ns):
+            filtered.append(ns[i])
+        i += 1
+    return sum(filtered)
+
+def predicate1(i, ns):
+    return ns[i] == ns[(i+1) % len(ns)]
+
+
+def main():
+    indata = input()
+    ns = striped(indata)
+    return filter(ns, predicate1)
+     
+
+    
+if __name__ == '__main__':
+    main()
