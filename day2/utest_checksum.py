@@ -26,4 +26,6 @@ class CapTest(unittest.TestCase):
         """correctly work with input"""
         print ( "id: " + self .id())
         self.assertEqual(checksum.work('9 3 1 8'), 8)
+if __name__ == '__main__' :
+    unittest.main()
 
