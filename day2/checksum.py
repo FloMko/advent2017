@@ -47,13 +47,11 @@ def work(inline):
 def main():
     """general cinstruct"""
     checks = 0
+    diff = 0
     midtext = middata(indata())
-    for line in midtext:
-        diff = work(line)
-        checks +=diff
-    print(checks)
-    return checks
+    return sum(map(work, midtext))
+
 
 if __name__ == '__main__':
-    main()
+    main1()
 
