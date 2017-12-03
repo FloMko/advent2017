@@ -17,11 +17,21 @@ def middata(intext):
     return midtext
 
 
-def max():
+def maxof(inline):
     """How to find max value"""
+    maxf = 0
+    for value in inline:
+        if int(value) > maxf:
+            maxf = int(value)
+    return maxf
 
-def min():
+def minof(inline):
     """How to find min value"""
+    minf = 9999
+    for value in inline:
+        if int(value) < minf:
+            minf = int(value)
+    return minf
 
 def main():
     """general cinstruct"""

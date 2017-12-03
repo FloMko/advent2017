@@ -17,11 +17,11 @@ class CapTest(unittest.TestCase):
     def test_find_max(self):
         """find max value from list"""
         print ( "id: " + self.id())
-        self.assertEqual(checksum.max([9,3,1,8]), 8)
+        self.assertEqual(checksum.maxof([9,3,1,8]), 9)
     def test_find_min(self):
         """find max value from list"""
         print ( "id: " + self.id())
-        self.assertEqual(checksum.max([9,3,1,8]), 1)
+        self.assertEqual(checksum.minof([9,3,1,8]), 1)
     def test_case(self):
         """correctly work with input"""
         print ( "id: " + self.id())
