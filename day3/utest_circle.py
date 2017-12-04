@@ -10,6 +10,10 @@ class CapTest(unittest.TestCase):
         """find max value from list"""
         print ( "id: " + self.id())
         self.assertEqual(circle.neighbors([[0, 7, 0], [0, 0, 0], [0, 0, 1]]), 8)
+    def test_set_num(self):
+        """find max value from list"""
+        print ( "id: " + self.id())
+        self.assertEqual(circle.set_node([[0, 7, 0], [0, 0, 0], [0, 0, 1]]), [[1, 0, 0], [0, 0, 0], [0, 0, 1]])
 
 if __name__ == '__main__' :
     unittest.main()
