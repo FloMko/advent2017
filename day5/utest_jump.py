@@ -21,7 +21,7 @@ class CapTest(unittest.TestCase):
     def test_case_turn_decrease(self):
         """correctly work with turn"""
         print ( "id: " + self.id())
-        self.assertEqual(jump.main2([0,3,0,1,-3]), 10)
+        self.assertEqual(jump.turn2([0,3,0,1,-3]), 10)
 
 if __name__ == '__main__' :
     unittest.main()

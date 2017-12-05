@@ -29,12 +29,12 @@ def main():
     return step
     print(step)
 
-def main2(intext=indata()):
-    step = turn2(intext)
+def main2():
+    step = turn2(indata())
     return step
     print(step)
 
 
 
 if __name__ == '__main__':
-    main()
+    main2()
