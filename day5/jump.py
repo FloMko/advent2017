@@ -12,10 +12,29 @@ def turn(inlist, i=0, j=0, val=0):
         i += inlist[i] -1
     return j
 
+def turn2(inlist, i=0, j=0, val=0):
+    while i < len(inlist) :
+        j +=1
+        if inlist[i] < 3:
+            inlist[i] += 1
+            i += inlist[i] -1
+        else:
+            inlist[i] -= 1
+            i += inlist[i] +1
+    return j
+
+
 def main():
     step = turn(indata())
     return step
     print(step)
+
+def main2(intext=indata()):
+    step = turn2(intext)
+    return step
+    print(step)
+
+
 
 if __name__ == '__main__':
     main()
