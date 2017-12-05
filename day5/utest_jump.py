@@ -18,7 +18,10 @@ class CapTest(unittest.TestCase):
         """correctly work with turn"""
         print ( "id: " + self.id())
         self.assertEqual(jump.turn([-1,0,0,0]), 10)
-
+    def test_case_turn(self):
+        """correctly work with turn"""
+        print ( "id: " + self.id())
+        self.assertEqual(jump.turn2([2,3,2,3,-1]), 10)
 
 if __name__ == '__main__' :
     unittest.main()
