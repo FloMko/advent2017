@@ -6,13 +6,13 @@ def indata():
 
 def change(list_instr, i=0):
     list_instr[i] +=1
-    return (list_instr, list_instr[i])
+    return (list_instr, list_instr[i+1])
 
 
 def main():
-    indata = indata()
+    inlist = indata()
     while i <= len(indata) -1 :
-        indata, i = change(indata, i)
+        inlist, i = change(inlist, i)
         j = j + 1
         return j
 
