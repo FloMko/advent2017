@@ -1,20 +1,17 @@
-def input():
+def indata():
     """Just read and store"""
     with open('input.txt', 'r') as data:
         instr = [line.split() for line in data.readlines()]
     return instr
 
-def change(list_instr, i=0, j=0):
-    while i <= len(list_instr)- 1:
-        temp = list_instr[i]
-        list_instr[i] +=1
-        i += temp
-        j+=1
+def change(list_instr, i=0):
+    list_instr[i] +=1
+    return (list_instr, list_instr[i])
 
-    return list_instr
-    print(j)
 
 def main():
-    change(input())
-if __name__ == '__main__':
-    main()
+    indata = indata()
+    while i <= len(indata) -1 :
+        indata, i = change(indata, i)
+        j = j + 1
+        return j
