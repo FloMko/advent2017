@@ -9,11 +9,16 @@ class CapTest(unittest.TestCase):
     def test_case(self):
         """correctly work with input"""
         print ( "id: " + self.id())
-        self.assertEqual(jump.change(([4,0,0,1]), 0), ([5,0,0,1], 0))
+        self.assertEqual(jump.turn([4,0,0,1]), 1)
     def test_case_negative(self):
         """correctly work with input"""
         print ( "id: " + self.id())
-        self.assertEqual(jump.change([4,0,-1,1], 2), ([4,0,0,1], 1))
+        self.assertEqual(jump.turn([2,0,-1,1]), 7)
+    def test_case_turn(self):
+        """correctly work with turn"""
+        print ( "id: " + self.id())
+        self.assertEqual(jump.turn([-1,0,0,0]), 10)
+
 
 if __name__ == '__main__' :
     unittest.main()

@@ -1,20 +1,21 @@
 def indata():
     """Just read and store"""
     with open('input.txt', 'r') as data:
-        instr = [line.split() for line in data.readlines()]
+        instr = [int(line) for line in data]
     return instr
 
-def change(list_instr, i=0):
-    list_instr[i] +=1
-    return (list_instr, list_instr[i+1])
 
+def turn(inlist, i=0, j=0, val=0):
+    while i < len(inlist) :
+        j +=1
+        inlist[i] += 1
+        i += inlist[i] -1
+    return j
 
 def main():
-    inlist = indata()
-    while i <= len(indata) -1 :
-        inlist, i = change(inlist, i)
-        j = j + 1
-        return j
+    step = turn(indata())
+    return step
+    print(step)
 
 if __name__ == '__main__':
     main()
