@@ -12,6 +12,9 @@ def change(list_instr, i=0, j=0):
         j+=1
 
     return list_instr
+    print(j)
 
+def main():
+    change(input())
 if __name__ == '__main__':
     main()
