@@ -15,3 +15,6 @@ def main():
         indata, i = change(indata, i)
         j = j + 1
         return j
+
+if __name__ == '__main__':
+    main()
