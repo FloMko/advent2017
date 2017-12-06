@@ -24,6 +24,8 @@ def turn2(inlist, i=0, j=0, val=0):
     return j
 
 
+
+
 def main():
     step = turn(indata())
     return step
