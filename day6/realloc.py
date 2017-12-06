@@ -7,6 +7,11 @@ def indata():
 
 def maxfind(intext):
     return max(intext), intext.index(max(intext))
+
+def detect(intext, aknowleged):
+    if intext in aknowleged:
+        return True
+
 def main():
     return indata()
     
