@@ -5,20 +5,11 @@ def indata():
         instr = [int(bank) for bank in instr]
     return instr
 
-
-def turn(inlist, i=0, j=0, val=0):
-    while i < len(inlist) :
-        j +=1
-        inlist[i] += 1
-        i += inlist[i] -1
-    return j
-
+def maxfind(intext):
+    return max(intext), intext.index(max(intext))
 def main():
-    step = turn(indata())
-    return step
-    print(step)
-
-
+    return indata()
+    
 if __name__ == '__main__':
     main()
 

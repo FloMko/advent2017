@@ -6,10 +6,10 @@ class CapTest(unittest.TestCase):
         """store input"""
         print ( "id: " + self.id())
         self.assertIsInstance(realloc.indata(), list)
-    def test_case_final(self):
+    def test_case_max(self):
         """correctly find max index"""
         print ( "id: " + self.id())
-        self.assertEqual(realloc.maxfind([0,2,7,7]), 2) 
+        self.assertEqual(realloc.maxfind([0,2,7,7]), (7,2)) 
     def test_case_final(self):
         """correctly work with input"""
         print ( "id: " + self.id())
