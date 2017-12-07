@@ -12,6 +12,17 @@ def detect(intext, aknowleged):
     if intext in aknowleged:
         return True
 
+def distribute(intext, i, n):
+    """redistrib memory
+       take state memory bank, index val ,max value 
+       return modified memory bank, 
+    """
+    while n > 0:
+        i = i + 1 % len(intext)
+        intext[i] += 1
+        n -= 1
+    return intext
+
 def main():
     return indata()
     
