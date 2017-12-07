@@ -17,11 +17,13 @@ def distribute(intext, i, n):
        take state memory bank, index val ,max value 
        return modified memory bank, 
     """
+    z = i
     while n > 0:
-        i = i + 1 % len(intext)
+        i = (i + 1) % len(intext)
         print(type(intext[i]))
         intext[i] += 1
         n -= 1
+    intext[z] = 0
     return intext
 
 def main():
