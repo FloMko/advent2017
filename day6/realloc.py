@@ -26,7 +26,13 @@ def distribute(intext, i, n):
     intext[z] = 0
     return intext
 
-def main():
+def main(not_find_yet=False):
+    memory = indata()
+#    while not_find_yet:
+#       not_find_yet = detect(memory,aknowleged)
+#       val, pos = realloc.maxfind(memory)
+
+
     return indata()
     
 if __name__ == '__main__':
