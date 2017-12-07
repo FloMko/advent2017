@@ -12,6 +12,10 @@ def detect(intext, aknowleged):
     if intext in aknowleged:
         return True
 
+def aknowleg(intext, aknowleged=list()):
+    aknowleged.append(intext)
+    return aknowleged
+
 def distribute(intext, i, n):
     """redistrib memory
        take state memory bank, index val ,max value 
@@ -20,7 +24,6 @@ def distribute(intext, i, n):
     z = i
     while n > 0:
         i = (i + 1) % len(intext)
-        print(type(intext[i]))
         intext[i] += 1
         n -= 1
     intext[z] = 0
@@ -28,12 +31,17 @@ def distribute(intext, i, n):
 
 def main(not_find_yet=False):
     memory = indata()
-#    while not_find_yet:
-#       not_find_yet = detect(memory,aknowleged)
-#       val, pos = realloc.maxfind(memory)
+    aknowleged = []
+    step = 0
+    while not_find_yet:
+        aknowleged.append(memory)
+        not_find_yet = detect(memory,aknowleged)
+        val, pos = maxfind(memory)
+        memory = distribute(memory, pos, val)
+        step += 1
+        print(step)
 
-
-    return indata()
+    return step
     
 if __name__ == '__main__':
     main()
