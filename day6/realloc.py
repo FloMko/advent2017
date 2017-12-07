@@ -19,6 +19,7 @@ def distribute(intext, i, n):
     """
     while n > 0:
         i = i + 1 % len(intext)
+        print(type(intext[i]))
         intext[i] += 1
         n -= 1
     return intext
