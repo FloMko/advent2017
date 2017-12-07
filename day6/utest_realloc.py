@@ -22,10 +22,10 @@ class CapTest(unittest.TestCase):
         """detect loop"""
         print ( "id: " + self.id())
         self.assertEqual(realloc.aknowleg([[2,3,0,0],[2,4,7,7]]),[[[2,3,0,0],[2,4,7,7]]])
-#    def test_case_final(self):
-#        """correctly work with input"""
-#        print ( "id: " + self.id())
-#        self.assertEqual(realloc.main([0,2,7,0]), 5)
+    def test_case_final(self):
+        """correctly work with input"""
+        print ( "id: " + self.id())
+        self.assertEqual(realloc.main([0,2,7,0]), 5)
 
 if __name__ == '__main__' :
     unittest.main()

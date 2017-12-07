@@ -12,7 +12,7 @@ def detect(intext, aknowleged):
     if intext in aknowleged:
         return True
 
-def aknowleg(intext, aknowleged=list()):
+def aknowleg(intext, aknowleged):
     aknowleged.append(intext)
     return aknowleged
 
@@ -34,13 +34,13 @@ def main(not_find_yet=False):
     aknowleged = []
     step = 0
     while not_find_yet:
-        aknowleged.append(memory)
+        aknowleged = aknowleg(memory, aknowleged)
         not_find_yet = detect(memory,aknowleged)
         val, pos = maxfind(memory)
         memory = distribute(memory, pos, val)
         step += 1
         print(step)
-
+        print(not_find_yet)
     return step
     
 if __name__ == '__main__':
