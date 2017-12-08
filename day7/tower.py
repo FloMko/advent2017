@@ -1,8 +1,8 @@
 def indata():
     """Just read and store"""
     with open('input.txt', 'r') as data:
-        instr = data.readline().split()
-        instr = [int(bank) for bank in instr]
+        instr = [line.strip() for line in data]
+        instr = [graph for graph in instr]
     return instr
 
     
