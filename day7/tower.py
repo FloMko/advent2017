@@ -18,7 +18,7 @@ def chunk(instr):
     name = instr.split()[0]
     ## should find method to convert string
     ## with parentheses to int, or not to conver
-
+    return name, leaf
 
 
 if __name__ == '__main__':
