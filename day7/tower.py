@@ -16,6 +16,8 @@ def chunk(instr):
     if '->' in instr:
         leaf = True
     name = instr.split()[0]
+    ## should find method to convert string
+    ## with parentheses to int, or not to conver
 
 
 
