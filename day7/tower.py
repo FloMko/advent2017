@@ -2,7 +2,7 @@ def indata():
     """Just read and store"""
     with open('input.txt', 'r') as data:
         instr = [line.strip() for line in data]
-        instr = [graph for graph in instr]
+#        instr = [graph for graph in instr]
     return instr
 
     
