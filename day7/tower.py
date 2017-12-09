@@ -31,8 +31,8 @@ def aknowleg_prog(programm, aknowleged_prog=set()):
 
 def buld_tower(inlist = indata()):
     tower = {}
-    for lines in inlist:
-        name, leaf, leap, weight = chunk(instr)
+    for line in inlist:
+        name, leaf, leap, weight = chunk(line)
         tower[name] = weight, leap
     return tower
     
