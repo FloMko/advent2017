@@ -46,6 +46,11 @@ class CapTest(unittest.TestCase):
         print ("id: " + self.id())
         self.assertEqual(realloc.stepcount([0, 2, 7, 0]), 5)
 
+    def test_case_loop(self):
+        """correctly work with input"""
+        print ("id: " + self.id())
+        self.assertEqual(realloc.loop([2,4,1,2]), 4)
+
 
 if __name__ == '__main__':
     unittest.main()

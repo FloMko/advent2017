@@ -1,14 +1,11 @@
 def indata():
     """Just read and store"""
     with open('input.txt', 'r') as data:
-        instr = data.readline().split()
-        instr = [int(bank) for bank in instr]
+        instr = [int(bank) for bank in data.readline().split()]
     return instr
-
 
 def maxfind(intext):
     return max(intext), intext.index(max(intext))
-
 
 def detect(intext, aknowleged):
     if intext in aknowleged:
@@ -16,12 +13,19 @@ def detect(intext, aknowleged):
     else:
         return True
 
+def loop(memory):
+    step=1
+    original = memory.copy()
+    distribute(memory)
+    while original != memory:
+        step+=1
+        distribute(memory)
+    return step
 
 def aknowleg(intext, aknowleged):
     aknowleged.append(intext)
     print(intext,aknowleged)
     return aknowleged
-
 
 def distribute(intext, i=0):
     """redistrib memory
@@ -48,5 +52,5 @@ def stepcount(memory):
     print(step)
 
 if __name__ == '__main__':
-    step = stepcount(indata())
+    step = loop(indata())
     print(step)
