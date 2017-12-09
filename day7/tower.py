@@ -10,14 +10,15 @@ def chunk(instr):
        of child, True if have
     """
     name = ''
-    pos = int()
     leaf = False
     if '->' in instr:
         leaf = True
     name = instr.split()[0]
-    ## should find method to convert string
-    ## with parentheses to int, or not to conver
-    return name, leaf
+    if leaf:
+        leap = instr.split('-> ')[1].split(', ')
+        return name, leaf, leap
+    else:
+        return name, leaf
 
 def aknowleg(leaflist, aknowleged=set()):
     for prog in leaflist:
