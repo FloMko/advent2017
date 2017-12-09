@@ -14,11 +14,12 @@ def chunk(instr):
     if '->' in instr:
         leaf = True
     name = instr.split()[0]
+    weight = int(instr.split()[1].strip('()'))
     if leaf:
         leap = instr.split('-> ')[1].split(', ')
-        return name, leaf, leap
+        return name, leaf, leap, weight
     else:
-        return name, leaf, None
+        return name, leaf, None, weigh
 
 def aknowleg(leaflist, aknowleged=set()):
     for prog in leaflist:
