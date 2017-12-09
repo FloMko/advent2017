@@ -13,6 +13,8 @@ def maxfind(intext):
 def detect(intext, aknowleged):
     if intext in aknowleged:
         return False
+    else:
+        return True
 
 
 def aknowleg(intext, aknowleged=[]):
