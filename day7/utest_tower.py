@@ -16,7 +16,7 @@ class CapTest(unittest.TestCase):
     def test_aknowleg(self):
         """add leaf in set of child leaf"""
         print ( "id: " + self.id())
-        self.assertEqual(tower.aknowleg('kdsf','dfs','asd'), {'kdfs', 'dfs', 'asd'})
+        self.assertEqual(tower.aknowleg(['kdsf','dfs','asd']), {'kdfs', 'dfs', 'asd'})
 
 if __name__ == '__main__' :
     unittest.main()
