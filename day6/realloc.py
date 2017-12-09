@@ -23,11 +23,13 @@ def aknowleg(intext, aknowleged):
     return aknowleged
 
 
-def distribute(intext, i, n):
+def distribute(intext, i=0):
     """redistrib memory
     take state memory bank, index val ,max value 
     return modified memory bank, 
     """
+    n = max(intext)
+    i = intext.index(n)
     intext[i] = 0
     while n > 0:
         i = (i + 1) % len(intext)
@@ -35,16 +37,13 @@ def distribute(intext, i, n):
         n -= 1
     return intext
 
-
-def stepcount(memory, not_find_yet=True):
-    aknowleged = [[]]
+def stepcount(memory):
+    aknowleged = set()
     step = 0
-    while not_find_yet:
-        not_find_yet = detect(memory, aknowleged)
-        aknowleged = aknowleg(memory, aknowleged)
-        val, pos = maxfind(memory)
-        memory = distribute(memory, pos, val)
+    while str(memory) not in aknowleged:
         step += 1
+        aknowleged.add(str(memory))
+        distribute(memory)
     return step
 
 

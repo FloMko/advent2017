@@ -28,7 +28,7 @@ class CapTest(unittest.TestCase):
     def test_case_distribute(self):
         """realloc memory"""
         print ("id: " + self.id())
-        self.assertEqual(realloc.distribute([0, 2, 7, 0], 2, 7), [2, 4, 1, 2])
+        self.assertEqual(realloc.distribute([0, 2, 7, 0]), [2, 4, 1, 2])
 
     def test_case_aknowleged(self):
         """detect loop"""
