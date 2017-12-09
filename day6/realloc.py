@@ -29,7 +29,19 @@ def distribute(intext, i, n):
     intext[z] = 0
     return intext
 
-def main(not_find_yet=False):
+def stepcount(memory, not_find_yet=True):
+    aknowleged = []
+    step = 0
+    while not_find_yet:
+        not_find_yet = detect(memory,aknowleged)
+        aknowleged = aknowleg(memory, aknowleged)
+        val, pos = maxfind(memory)
+        memory = distribute(memory, pos, val)
+        step += 1
+    return step
+
+
+def main(not_find_yet=True):
     memory = indata()
     aknowleged = []
     step = 0
@@ -39,10 +51,7 @@ def main(not_find_yet=False):
         val, pos = maxfind(memory)
         memory = distribute(memory, pos, val)
         step += 1
-        print(step)
-        print(not_find_yet)
     return step
-    print(step)
     
 if __name__ == '__main__':
     main()
