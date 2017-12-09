@@ -42,6 +42,7 @@ def main(not_find_yet=False):
         print(step)
         print(not_find_yet)
     return step
+    print(step)
     
 if __name__ == '__main__':
     main()
