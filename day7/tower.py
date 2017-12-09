@@ -9,7 +9,6 @@ def chunk(instr):
        return name, posithion and state
        of child, True if have
     """
-    name = ''
     leaf = False
     if '->' in instr:
         leaf = True
@@ -30,6 +29,13 @@ def aknowleg_prog(programm, aknowleged_prog=set()):
     aknowleged_prog.add(programm)
     return(aknowleged_prog)
 
+def buld_tower(inlist = indata()):
+    tower = {}
+    for lines in inlist:
+        name, leaf, leap, weight = chunk(instr)
+        tower[name] = weight, leap
+    return tower
+    
 def root():
     aknowleged = set()
     aknowleged_prog = set()
