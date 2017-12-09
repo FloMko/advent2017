@@ -19,7 +19,7 @@ def chunk(instr):
         leap = instr.split('-> ')[1].split(', ')
         return name, leaf, leap, weight
     else:
-        return name, leaf, None, weigh
+        return name, leaf, None, weight
 
 def aknowleg(leaflist, aknowleged=set()):
     for prog in leaflist:
@@ -30,19 +30,18 @@ def aknowleg_prog(programm, aknowleged_prog=set()):
     aknowleged_prog.add(programm)
     return(aknowleged_prog)
 
-def main():
+def root():
     aknowleged = set()
     aknowleged_prog = set()
     inlist = indata()
     for instr in inlist:
-        name, leaf, leap = chunk(instr)
+        name, leaf, leap, weight = chunk(instr)
         if leap != None:
             aknowleged = aknowleg(leap, aknowleged)
         aknowleged_prog = aknowleg_prog(name, aknowleged_prog)
     for prog in aknowleged_prog:
         if prog not in aknowleged:
-            print(prog)
-
+            return(prog)
 
 if __name__ == '__main__':
     main()

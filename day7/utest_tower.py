@@ -23,7 +23,10 @@ class CapTest(unittest.TestCase):
         print ( "id: " + self.id())
         self.assertEqual(tower.aknowleg_prog('kdsf'), {'kdsf'})
 
-
+    def test_find_root(self):
+        """correct find root"""
+        print ( "id: " + self.id())
+        self.assertEqual(tower.root(), 'mkxke')
 if __name__ == '__main__' :
     unittest.main()
 
