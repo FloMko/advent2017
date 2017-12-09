@@ -18,6 +18,11 @@ class CapTest(unittest.TestCase):
         print ( "id: " + self.id())
         self.assertEqual(tower.aknowleg(['kdsf','dfs','asd']), {'kdsf', 'dfs', 'asd'})
 
+    def test_aknowleg_prog(self):
+        """add prog in set of parent prog"""
+        print ( "id: " + self.id())
+        self.assertEqual(tower.aknowleg_prog('kdsf'), {'kdsf'})
+
 if __name__ == '__main__' :
     unittest.main()
 
