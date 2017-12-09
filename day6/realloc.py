@@ -17,7 +17,7 @@ def detect(intext, aknowleged):
         return True
 
 
-def aknowleg(intext, aknowleged=[]):
+def aknowleg(intext, aknowleged=[[]]):
     aknowleged.append(intext)
     return aknowleged
 
@@ -37,7 +37,7 @@ def distribute(intext, i, n):
 
 
 def stepcount(memory, not_find_yet=True):
-    aknowleged = []
+    aknowleged = [[]]
     step = 0
     while not_find_yet:
         not_find_yet = detect(memory, aknowleged)
