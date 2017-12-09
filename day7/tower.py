@@ -19,6 +19,11 @@ def chunk(instr):
     ## with parentheses to int, or not to conver
     return name, leaf
 
+def aknowleg(leaflist, aknowleged=set()):
+    for prog in leaflist:
+        aknowleged.add(prog)
+    return(aknowleged)
+
 
 if __name__ == '__main__':
     main()
