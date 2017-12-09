@@ -1,9 +1,14 @@
-def indata():
-    """Just read and store"""
-    with open('input.txt', 'r') as data:
-        instr =[int(n) for n in data.readline().split()]
-    return instr
 
+def distribute(arr):
+    num = max(arr)
+    ind = arr.index(num)
+    arr[ind] = 0
+    while num > 0:
+        ind += 1
+        if ind >= len(arr):
+            ind = 0
+        arr[ind] += 1
+        num -= 1
 
 def bank(arr):
     n = 0
@@ -11,18 +16,23 @@ def bank(arr):
     while str(arr) not in s:
         n += 1
         s.add(str(arr))
-        num = max(arr)
-        ind = arr.index(num)
-        arr[ind] = 0
-        while num > 0:
-            ind += 1
-            if ind >= len(arr):
-                ind = 0
-            arr[ind] += 1
-            num -= 1
-    print(n)
+        distribute(arr)
+    return n
+
+def loop(arr):
+    n = 1
+    original = arr.copy()
+    distribute(arr)
+    while original != arr:
+        n += 1
+        distribute(arr)
     return n
 
 
 if __name__ == '__main__':
-    bank(indata())
+    with open('input.txt') as f:
+        arr = [int(n) for n in f.readline().split()]
+        bank(arr)
+        print(loop(arr))
+
+
