@@ -45,20 +45,8 @@ def stepcount(memory):
         aknowleged.add(str(memory))
         distribute(memory)
     return step
-
-
-def main(not_find_yet=True):
-    memory = indata()
-    aknowleged = []
-    step = 0
-    while not_find_yet:
-        aknowleged = aknowleg(memory, aknowleged)
-        not_find_yet = detect(memory, aknowleged)
-        val, pos = maxfind(memory)
-        memory = distribute(memory, pos, val)
-        step += 1
-    return step
-
+    print(step)
 
 if __name__ == '__main__':
-    main()
+    step = stepcount(indata())
+    print(step)
