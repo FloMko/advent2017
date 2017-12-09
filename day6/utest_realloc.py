@@ -13,7 +13,7 @@ class CapTest(unittest.TestCase):
     def test_case_equal(self):
         """detect loop"""
         print ( "id: " + self.id())
-        self.assertEqual(realloc.detect([0,2,7,7],[[0,2,7,6],[0,2,7,7]]), True)
+        self.assertEqual(realloc.detect([0,2,7,7],[[0,2,7,6],[0,2,7,7]]), False)
     def test_case_distribute(self):
         """detect loop"""
         print ( "id: " + self.id())

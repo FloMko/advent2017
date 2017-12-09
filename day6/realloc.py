@@ -10,9 +10,9 @@ def maxfind(intext):
 
 def detect(intext, aknowleged):
     if intext in aknowleged:
-        return True
+        return False
 
-def aknowleg(intext, aknowleged):
+def aknowleg(intext, aknowleged=[]):
     aknowleged.append(intext)
     return aknowleged
 
