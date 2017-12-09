@@ -11,7 +11,7 @@ class CapTest(unittest.TestCase):
         """analyze leaf"""
         print ( "id: " + self.id())
         self.assertEqual(tower.chunk('ehsqyyb (174) -> xtcdt, tujcuy, wiqohmb, cxdwmu')
-                                    ,('ehsqyyb', True))
+                ,('ehsqyyb', True, ['xtcdt', 'tujcuy', 'wiqohmb', 'cxdwmu']))
 
     def test_aknowleg(self):
         """add leaf in set of child leaf"""
@@ -22,6 +22,12 @@ class CapTest(unittest.TestCase):
         """add prog in set of parent prog"""
         print ( "id: " + self.id())
         self.assertEqual(tower.aknowleg_prog('kdsf'), {'kdsf'})
+
+    def test_aknowleg_prog(self):
+        """add prog in set of parent prog"""
+        print ( "id: " + self.id())
+        self.assertEqual(tower.aknowleg_prog('kdsf'), {'kdsf'})
+
 
 if __name__ == '__main__' :
     unittest.main()
