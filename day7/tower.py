@@ -24,6 +24,10 @@ def aknowleg(leaflist, aknowleged=set()):
         aknowleged.add(prog)
     return(aknowleged)
 
+def aknowleg_prog(programm, aknowleged_prog=set()):
+    aknowleged_prog.add(programm)
+    return(aknowleged_prog)
+
 
 if __name__ == '__main__':
     main()
