@@ -36,8 +36,14 @@ def buld_tower(inlist = indata()):
         tower[name] = weight, leaf, leap
     return tower
 
+def balance(tower, name):
+    root_weight = tower[name][1]
+    leafs = tower[name][2]
+    weight = 0
+    for leaf in leafs:
+        weight += tower[leaf][1]
+    return root_weight > weight
 
-    
 def root():
     aknowleged = set()
     aknowleged_prog = set()

@@ -36,8 +36,8 @@ class CapTest(unittest.TestCase):
                     'dsmuem':(31, False, None),
                     'xlpgtmn':(31, False, None),
                     'rdcew':(31, False, None),
-                })
-                , 'zzcrp', True)
+                }
+                , 'zzzcrp'), True)
 
 if __name__ == '__main__' :
     unittest.main()
