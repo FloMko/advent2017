@@ -10,6 +10,16 @@ def rewrite(instr=indata()):
     new_str = re.sub('!.','',instr)
     return re.sub('<.*?>', '<>', new_str)
 
+def score(instr=indata()):
+    scor = 0
+    depth = 0
+    for symbol in rewrite(instr):
+        if symbol == '{':
+            depth +=1
+        else:
+            scor += depth
+            depth -=1
+    return scor
 
 if __name__ == '__main__':
     main()
