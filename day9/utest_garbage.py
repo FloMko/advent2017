@@ -23,5 +23,11 @@ class CapTest(unittest.TestCase):
         print ("id: " + self.id())
         self.assertEqual(garbage.score('{{{}}}'), 6)
 
+    def test_count_garbage(self):
+        """lets count garbage"""
+        print ("id: " + self.id())
+        self.assertEqual(garbage.score_garbage('{{{<!>{}{{{!>>}}}'), 5)
+
+
 if __name__ == '__main__':
     unittest.main()
