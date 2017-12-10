@@ -33,15 +33,17 @@ def buld_tower(inlist = indata()):
     tower = {}
     for line in inlist:
         name, leaf, leap, weight = chunk(line)
-        tower[name] = weight, leap
+        tower[name] = weight, leaf, leap
     return tower
+
+
     
 def root():
     aknowleged = set()
     aknowleged_prog = set()
-    inlist = indata()
-    for instr in inlist:
-        name, leaf, leap, weight = chunk(instr)
+    tower = buld_tower()
+    for name in tower.keys():
+        leap = tower[name][2]
         if leap != None:
             aknowleged = aknowleg(leap, aknowleged)
         aknowleged_prog = aknowleg_prog(name, aknowleged_prog)

@@ -27,6 +27,18 @@ class CapTest(unittest.TestCase):
         """correct find root"""
         print ( "id: " + self.id())
         self.assertEqual(tower.root(), 'mkxke')
+
+    def test_correct_sum(self):
+        """detect unbalance parent and it's child"""
+        print ( "id: " + self.id())
+        self.assertEqual(tower.balance(
+                {'zzzcrp':(100, True, ['dsmuem', 'xlpgtmn', 'rdcew']),
+                    'dsmuem':(31, False, None),
+                    'xlpgtmn':(31, False, None),
+                    'rdcew':(31, False, None),
+                })
+                , 'zzcrp', True)
+
 if __name__ == '__main__' :
     unittest.main()
 
