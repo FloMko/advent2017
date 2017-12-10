@@ -1,3 +1,4 @@
+import re
 
 def indata():
     """Just read and store"""
@@ -5,6 +6,9 @@ def indata():
         instr = data.readline()
     return instr
 
+def rewrite(instr=indata()):
+    new_str = re.sub('!.','',instr)
+    return new_str
 
 
 if __name__ == '__main__':

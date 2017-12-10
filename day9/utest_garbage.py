@@ -11,7 +11,7 @@ class CapTest(unittest.TestCase):
     def test_rewrite_input(self):
         """chain input to store"""
         print ("id: " + self.id())
-        self.assertEqual(garbage.rewrite('<!>>'), '<>')
+        self.assertEqual(garbage.rewrite('<!>!>>'), '<>')
 
 
 if __name__ == '__main__':
