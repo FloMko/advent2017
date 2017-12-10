@@ -8,8 +8,8 @@ class CapTest(unittest.TestCase):
         print ("id: " + self.id())
         self.assertIsInstance(register.indata(), list)
 
-    def test_indata_chunk(self):
-        """analyze leaf"""
+    def test_collect_register(self):
+        """analyze set to register name"""
         print ("id: " + self.id())
         self.assertEqual(register.collect([
             'b inc 5 if a > 1',
