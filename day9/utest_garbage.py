@@ -16,8 +16,12 @@ class CapTest(unittest.TestCase):
     def test_count_score(self):
         """lets count"""
         print ("id: " + self.id())
-        self.assertEqual(garbage.score('{{{}}}'), 6)
+        self.assertEqual(garbage.score('{{{<!>{}{{{}!>>}}}'), 6)
 
+    def test_count_score2(self):
+        """lets count"""
+        print ("id: " + self.id())
+        self.assertEqual(garbage.score('{{{}}}'), 6)
 
 if __name__ == '__main__':
     unittest.main()
