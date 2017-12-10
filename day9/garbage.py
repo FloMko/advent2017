@@ -8,7 +8,7 @@ def indata():
 
 def rewrite(instr=indata()):
     new_str = re.sub('!.','',instr)
-    return new_str
+    return re.sub('<.*?>', '<>', new_str)
 
 
 if __name__ == '__main__':
