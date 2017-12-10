@@ -40,9 +40,10 @@ def balance(tower, name):
     root_weight = tower[name][1]
     leafs = tower[name][2]
     weight = 0
-    for leaf in leafs:
-        weight += tower[leaf][1]
-    return root_weight > weight
+    if leafs != None:
+        for leaf in leafs:
+            weight += tower[leaf][1]
+    return root_weight >= weight
 
 def root():
     aknowleged = set()
@@ -57,6 +58,21 @@ def root():
         if prog not in aknowleged:
             return(prog)
 
+def unbalance():
+    aknowleged = set()
+    aknowleged_prog = set()
+    tower = buld_tower()
+    for name in tower.keys():
+        unbalance = balance(tower, name)
+        if unbalance != True:
+            leap = tower[name][2]    
+            if leap != None:
+                aknowleged = aknowleg(leap, aknowleged)
+            aknowleged_prog = aknowleg_prog(name, aknowleged_prog)
+    for prog in aknowleged_prog:
+        if prog not in aknowleged:
+            print(prog)
+
 if __name__ == '__main__':
-    main()
+    unbalance()
 
