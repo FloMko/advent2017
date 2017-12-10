@@ -4,5 +4,12 @@ def indata():
         instr = [line.strip() for line in data]
     return instr
 
+def collect(inlist=indata()):
+    regiester_dict = {}
+    for line in inlist:
+        regiester_dict[line.split()[0]] = 0
+    return regiester_dict
+
+
 if __name__ == '__main__' :
     main()
