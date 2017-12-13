@@ -11,12 +11,16 @@ def reverse(inlist, pos, length):
         get circular list, position in list and lenght of reverse
         return modified list
         """
-        rever = collections.deque(inlist)
-        rever.rotate(-pos)
-        for position in range(pos, pos +  length % len(inlist)):
-            inlist[position % len(inlist)] = rever[position - length % len(inlist)]
-
+        inlist.rotate(-pos)
+        original = list(inlist)
+        rever = original[0:length]
+        rever.reverse()
+        for position in range(0, length):
+            original[position] = rever[position]
+        inlist = deque(original)
+        inlist.rotate(pos)
         return inlist
+
 
 if __name__ == '__main__':
     main()

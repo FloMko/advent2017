@@ -23,7 +23,7 @@ class CapTest(unittest.TestCase):
         return modified list
         """
         print ("id: " + self.id())
-        self.assertEqual(knot.reverse([2,1,0,3,4], 3, 4), [4,3,0,1,2])
+        self.assertEqual(knot.reverse(deque([2,1,0,3,4]), 3, 4), deque([4,3,0,1,2]))
 
 
 
