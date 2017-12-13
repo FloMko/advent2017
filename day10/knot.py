@@ -3,7 +3,7 @@ from collections import deque
 def indata():
     """Just read and store"""
     with open('input.txt', 'r') as data:
-        instr = deque(data.readline().split())
+        instr = [int(data) for data in data.readline().strip().split(',')]
     return instr
 
 def reverse(inlist, pos, length):
@@ -28,11 +28,10 @@ def main():
     skip_size = 1
     seq = [seq for seq in range(0,256)]
     for length in sault:
-        print(length)
         seq = reverse(seq, pos, length)
         pos = pos + length + skip_size
         skip_size+=1
-    print(seq)
+    print(seq[0]*seq[1])
 
 
 if __name__ == '__main__':
