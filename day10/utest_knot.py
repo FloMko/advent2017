@@ -7,7 +7,7 @@ class CapTest(unittest.TestCase):
     def test_input_store(self):
         """store input"""
         print ("id: " + self.id())
-        self.assertIsInstance(knot.indata(), list)
+        self.assertIsInstance(knot.indata(), deque)
 
     def test_reverse_section(self):
         """
