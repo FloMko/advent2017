@@ -25,7 +25,7 @@ def reverse(inlist, pos, length):
 def main():
     sault=indata()
     pos = 0
-    skip_size = 1
+    skip_size = 0
     seq = [seq for seq in range(0,256)]
     for length in sault:
         seq = reverse(seq, pos, length)
