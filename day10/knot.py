@@ -31,7 +31,19 @@ def main():
         seq = reverse(seq, pos, length)
         pos = pos + length + skip_size
         skip_size+=1
-    print(seq[0]*seq[1])
+    return seq
+
+def xor(sparse_hash):
+    xored = 0
+    for n in sparse_hash:
+        xored ^= n
+    return xored
+
+
+def main2():
+    sault=indata()
+    sault+=[17, 31, 73, 47, 23]
+    
 
 
 if __name__ == '__main__':

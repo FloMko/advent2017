@@ -25,6 +25,12 @@ class CapTest(unittest.TestCase):
         print ("id: " + self.id())
         self.assertEqual(knot.reverse(deque([2,1,0,3,4]), 3, 4), deque([4,3,0,1,2]))
 
+    def test_xor(self):
+        """
+        get sparse hash, return xored sparse hash
+        """
+        print ("id: " + self.id())
+        self.assertEqual(knot.xor([65,27,9,1,4,3,40,50,91,7,6,0,2,5,68,22]), 64)
 
 
 if __name__ == '__main__':
