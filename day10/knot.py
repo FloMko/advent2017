@@ -22,12 +22,10 @@ def reverse(inlist, pos, length):
     inlist.rotate(pos)
     return inlist
 
-def main():
-    sault=indata()
+def simple_knot(seq, sault, repeat=1):
     pos = 0
     skip_size = 0
-    seq = [seq for seq in range(0,256)]
-    for length in sault:
+    for length in sault*repeat:
         seq = reverse(seq, pos, length)
         pos = pos + length + skip_size
         skip_size+=1
@@ -40,10 +38,23 @@ def xor(sparse_hash):
     return xored
 
 
-def main2():
+def complicated_knot(seq, sault):
+    sault = [ord(str(c)) for c in sault]
+    lengths.extend([17, 31, 73, 47, 23])
+    dense_hash = [0]*16
+    res = simple_knot(list_[:], lengths, times=64)
+    dense = [0]*16
+    for i in range(16):
+        dense[i] = xor(res[i*16:i*16+16])
+    return ''.join(['%02x' % d for d in dense])
+
+def main():
     sault=indata()
-    sault+=[17, 31, 73, 47, 23]
-    
+    seq = [seq for seq in range(0,256)]
+    p1 = simple_knot(seq[:], sault)
+    print(p1[0] * p1[1])
+    print(complicated_knot(seq[:], sault))
+
 
 
 if __name__ == '__main__':
